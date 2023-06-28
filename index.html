@@ -83,7 +83,10 @@
                  </div>
 
 
-                 <div id="cuadricula"> </div>
+                <div id="cuadricula"> </div>
+
+                <div><button onclick="generartablero()">Generar tabla</button></div>
+                <div id="cuadros"></div>
 
              </div>
          </main>
@@ -94,4 +97,58 @@
                  integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
                  crossorigin="anonymous"></script>
      </body>
+
+    <script>
+        function generartablero(){
+            var cantidad=12;
+            //document.getElementById('cantidad').value;
+            var filas;
+
+            //var cantidad=document.getElementById('cantidad').value *2;
+
+            const divisores = n => {
+                let values=[];
+                const end=Math.floor(Math.sqrt(n));
+
+                for (let i=1; i<=end; i++) {
+                    if (n%i==0) {
+                        values.push(i);
+                        if (i*i!=n) {
+                            values.push(n/i);
+                        }
+                    }
+                }
+                return values.sort((a,b)=>a-b);
+            }
+
+            console.log(divisores(12));
+
+
+            const par = (numero) => {
+                if (typeof numero !== "number")
+                    return console.log("Debes ingresar un numero");
+                if (numero % 2 === 0) {
+                    return console.log(`El numero ${numero} es Par`);
+                }
+            }
+
+
+            //var filas = cantidad/
+            var columnas;
+            var alto=100;
+            var ancho=100;
+            document.getElementById('cuadros').innerHTML='';
+            document.getElementById('cuadros').style.width = ((2 + ancho) *4) + "px";
+
+            for (var i=0;i<cantidad;i++){
+                if(Math.floor(i/4)%2 == i%2){
+                    document.getElementById('cuadros').innerHTML+='<div id="cuadros" style="border:solid 1px;width:'+ ancho +'px;height:' + alto +'px;background-color:lightskyblue;float:left;margin-right: 1%; margin-top: 1%;margin-bottom: 1% "><div>';
+                }else{
+                    document.getElementById('cuadros').innerHTML+='<div id="cuadros" style="border:solid 1px;width:'+ ancho +'px;height:' + alto +'px;background-color:lightskyblue;float:left;margin-right: 1%; margin-top: 1%;margin-bottom: 1% "><div>';
+
+                }
+            }
+        }
+    </script>
+
  </html>
