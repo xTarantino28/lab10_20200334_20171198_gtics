@@ -72,29 +72,17 @@
 
         <main>
             <div class="container">
-                <h2> Juego de personajes movedizos </h2>
+                <h2> El juego de la memoria </h2>
+                <h6 > Total de imágenes seleccionadas: </h6>
+                <div class="" style="width: 600px">
+                    <input type="file" id="subirPersonaje" aria-label="Agregar imágenes" name="file" style="display: none;" required>
+                    <button style="width: auto" class='btn btn-success'>
+                        <label for="subirPersonaje" id="labelarchivo">Agregar imagenes</label>
+                    </button>
+                </div>
 
-                <form action="index.html" id="IngresarPersonajes" method="post">
-                    <div class="mb-3 row" style="width: 600px">
-                        <label class="form-label">Ingrese el numero de personajes</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="inputNroPersonajes" class="form-control" id="inputNroPersonajes" required >
-                        </div>
-                    </div>
-                    <div class="mb-3 row" style="width: 600px">
-                        <label class="form-label">Ingrese el tamaño de la pista (m)</label>
-                        <div class="col-sm-10">
-                            <input type="text" name="inputTamanoPista" class="form-control" id="inputTamanoPista" required>
-                        </div>
-                    </div>
-                    <button type="submit" id="" class="btn btn-primary"> Ingresar personajes</button>
 
-                </form>
-                <div id="InputsError" class="h3"> </div>
-                <div id="InputsCorrect1"> </div>
-
-                <div id="InputsCorrect2" class="row"> </div>
-
+                <div id="cuadricula"> </div>
 
             </div>
         </main>
