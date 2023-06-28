@@ -40,14 +40,15 @@
                             "<img id='imagenPrevisualizacion" + i + "' src='" + objectURL + "' width='100' height='100' alt=''> " +
                             "</div>");
                         contador = contador + 1;
+                        $("#contador").html("<h6 id=\"contador\"> Total de imágenes seleccionadas: "+ contador +" </h6>")
                     }
 
-                    for (let i = 0; i < contador; i++) {
-                        $("body").on("click", ".btn-close", function () {
-                            $("img").css('display', none);
-                            contador = contador - 1;
-                        })
-                    }
+
+                    $("body").on("click", ".btn-close", function () {
+                        $("img").css('display', none);
+                        contador = contador - 1;
+                    })
+
 
                 });
 
@@ -63,7 +64,7 @@
         <main>
             <div class="container">
                 <h2> El juego de la memoria </h2>
-                <h6 > Total de imágenes seleccionadas: </h6>
+                <h6 id="contador"> Total de imágenes seleccionadas: </h6>
                 <div class="" style="width: 600px">
                     <input multiple type="file" id="subirPersonaje" aria-label="Agregar imágenes" accept="image/png" name="imagenPersonaje" style="display: none;" required>
                     <button style="width: auto" class='btn btn-success'>
