@@ -35,19 +35,24 @@
                         // Y a la fuente de la imagen le ponemos el objectURL
                         //$imagenPrevisualizacion.src = objectURL;
                         $("#contenedorImagenes").append(
-                            "<div style='margin: 10px' class='col-3 d-flex justify-content-center border'> " +
-                            " <button type='button' class=\"btn-close\"  id='imagenCierra" + i + "' aria-label='close'>  </button>" +
+                            "<div style='margin: 10px'  id='imagenCierra" + i + "' class='col-3 align-items-center border'> " +
+                            " <button type='button' class=\"btn-close\" aria-label='close'>  </button>" +
                             "<img id='imagenPrevisualizacion" + i + "' src='" + objectURL + "' width='100' height='100' alt=''> " +
                             "</div>");
                         contador = contador + 1;
-                        $("#contador").html("<h6 id=\"contador\"> Total de imágenes seleccionadas: "+ contador +" </h6>")
+                        $("#contador").html("<h6 > Total de imágenes seleccionadas: "+ contador +" </h6>")
+                    }
+                    console.log(contador);
+                    for (let i = 0; i < contador; i++) {
+                        let stringO = "#imagenCierra" + i;
+                        $("div").on("click", stringO, function () {
+                            $(stringO).css('display', 'none');
+                            contador = contador - 1;
+                            $("#contador").html("<h6 > Total de imágenes seleccionadas: "+ contador +" </h6>")
+                        })
+
                     }
 
-
-                    $("body").on("click", ".btn-close", function () {
-                        $("img").css('display', none);
-                        contador = contador - 1;
-                    })
 
 
                 });
