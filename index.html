@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+              crossorigin="anonymous">
+        <title>Home</title>
+        <style>
+
+
+        </style>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+                integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+                crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                // Obtener referencia al input y a la imagen
+
+                const $seleccionArchivos = document.querySelector("#subirPersonaje")
+                let contador = 0;
+
+                // Escuchar cuando cambie
+                $seleccionArchivos.addEventListener("change", () => {
+                    // Los archivos seleccionados, pueden ser muchos o uno
+
+                    const archivos = $seleccionArchivos.files;
+                    // Si no hay archivos salimos de la función y quitamos la imagen
+                    //if (!archivos || !archivos.length) {
+                    //  $imagenPrevisualizacion.src = "";
+                    //return;
+                    //}
+                    // Ahora tomamos el primer archivo, el cual vamos a previsualizar
+                    for (let i = 0; i < archivos.length; i++) {
+                        const archivo = archivos[i];
+                        // Lo convertimos a un objeto de tipo objectURL
+                        let objectURL = URL.createObjectURL(archivo);
+                        // Y a la fuente de la imagen le ponemos el objectURL
+                        //$imagenPrevisualizacion.src = objectURL;
+                        $("#contenedorImagenes").append(
+                            "<div style='margin: 10px'  id='imagenCierra" + i + "' class='col-3 align-items-center border'> " +
+                            " <button type='button' class=\"btn-close\" aria-label='close'>  </button>" +
+                            "<img id='imagenPrevisualizacion" + i + "' src='" + objectURL + "' width='100' height='100' alt=''> " +
+                            "</div>");
+                        contador = contador + 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    }
+                    console.log(contador);
+
+
+                    $("div").on("click", "#imagenCierra0", function () {
+                        $("#imagenCierra0").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra1", function () {
+                        $("#imagenCierra1").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra2", function () {
+                        $("#imagenCierra2").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra3", function () {
+                        $("#imagenCierra3").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra4", function () {
+                        $("#imagenCierra4").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra5", function () {
+                        $("#imagenCierra5").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra6", function () {
+                        $("#imagenCierra6").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra7", function () {
+                        $("#imagenCierra7").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra8", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra9", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra10", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra11", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra12", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra13", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+                    $("div").on("click", "#imagenCierra14", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+                    $("div").on("click", "#imagenCierra15", function () {
+                        $("#imagenCierra8").css('display', 'none');
+                        contador = contador - 1;
+                        $("#verdaderoContador").html("<div > "+ contador +" </div>")
+                    })
+
+
+
+
+
+
+                });
+
+
+
+
+            });
+        </script>
+
+
+
+    </head>
+    <body>
+
+
+        <main>
+            <div class="container">
+                <h2> El juego de la memoria </h2>
+                <h6 id="contador"> Total de imágenes seleccionadas: </h6>
+                <div id="verdaderoContador"> </div>
+                <div class="" style="width: 600px">
+                    <input multiple type="file" id="subirPersonaje" aria-label="Agregar imágenes" accept="image/png" name="imagenPersonaje" style="display: none;" required>
+                    <button style="width: auto" class='btn btn-success'>
+                        <label for="subirPersonaje" id="labelarchivo">Agregar imagenes</label>
+                    </button>
+                </div>
+                <div id="contenedorImagenes" class="row" style="width: 80%">
+                    <!-- La imagen que vamos a usar para previsualizar lo que el usuario selecciona -->
+                    <!-- <img id="imagenPrevisualizacion">-->
+
+                 </div>
+
+
+                <div id="cuadricula"> </div>
+
+                <div><button onclick="generartablero()">Generar tabla</button></div>
+                <div id="cuadros"></div>
+
+             </div>
+         </main>
+
+
+
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                 integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                 crossorigin="anonymous"></script>
+     </body>
+
+    <script>
+        function generartablero(){
+            var cantidad=document.getElementById('verdaderoContador')*2;
+            //document.getElementById('cantidad').value;
+            var filas;
+
+            //var cantidad=document.getElementById('cantidad').value *2;
+
+            const divisores = n => {
+                let values=[];
+                const end=Math.floor(Math.sqrt(n));
+
+                for (let i=1; i<=end; i++) {
+                    if (n%i==0) {
+                        values.push(i);
+                        if (i*i!=n) {
+                            values.push(n/i);
+                        }
+                    }
+                }
+                return values.sort((a,b)=>a-b);
+            }
+
+            console.log(divisores(12));
+
+
+            const par = (numero) => {
+                if (typeof numero !== "number")
+                    return console.log("Debes ingresar un numero");
+                if (numero % 2 === 0) {
+                    return console.log(`El numero ${numero} es Par`);
+                }
+            }
+
+
+            //var filas = cantidad/
+            var columnas;
+            var alto=100;
+            var ancho=100;
+            document.getElementById('cuadros').innerHTML='';
+            document.getElementById('cuadros').style.width = ((2 + ancho) *4) + "px";
+
+            for (var i=0;i<cantidad;i++){
+                if(Math.floor(i/4)%2 == i%2){
+                    document.getElementById('cuadros').innerHTML+='<div id="cuadros" style="border:solid 1px;width:'+ ancho +'px;height:' + alto +'px;background-color:lightskyblue;float:left;margin-right: 1%; margin-top: 1%;margin-bottom: 1% "><div>';
+                }else{
+                    document.getElementById('cuadros').innerHTML+='<div id="cuadros" style="border:solid 1px;width:'+ ancho +'px;height:' + alto +'px;background-color:lightskyblue;float:left;margin-right: 1%; margin-top: 1%;margin-bottom: 1% "><div>';
+
+                }
+            }
+        }
+
+    </script>
+
+ </html>
